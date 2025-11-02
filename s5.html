@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Anonymous Chat</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap"
+        rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+    <script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#308ce8",
+                        "background-light": "#f6f7f8",
+                        "background-dark": "#111418",
+                        "user-bubble-light": "#E0EFFF",
+                        "user-bubble-dark": "#308ce8",
+                        "bot-bubble-light": "#ECEFF1",
+                        "bot-bubble-dark": "#293038",
+                        "text-light-primary": "#1F2937",
+                        "text-dark-primary": "#FFFFFF",
+                        "text-light-secondary": "#6B7280",
+                        "text-dark-secondary": "#9dabb8",
+                    },
+                    fontFamily: {
+                        "display": ["Plus Jakarta Sans", "sans-serif"]
+                    },
+                    borderRadius: { "DEFAULT": "1rem", "lg": "1.25rem", "xl": "1.5rem", "full": "9999px" },
+                },
+            },
+        }
+    </script>
+    <style>
+        body {
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+    </style>
+    <style>
+        body {
+            min-height: max(884px, 100dvh);
+        }
+    </style>
+</head>
+
+<body class="bg-background-light dark:bg-background-dark font-display">
+    <div class="relative mx-auto flex h-screen max-w-md flex-col overflow-hidden">
+        <!-- Top App Bar -->
+        <div
+            class="flex shrink-0 items-center justify-between border-b border-gray-200/80 bg-background-light/80 p-4 pb-3 backdrop-blur-sm dark:border-gray-800/80 dark:bg-background-dark/80">
+            <div class="flex size-10 shrink-0 items-center justify-center">
+                <a href="index.html"><span
+                        class="material-symbols-outlined text-2xl text-text-light-primary dark:text-text-dark-primary">arrow_back</span></a>
+            </div>
+            <h2
+                class="flex-1 text-center text-lg font-bold tracking-tight text-text-light-primary dark:text-text-dark-primary">
+                Ask Anonymously</h2>
+            <div class="size-10 shrink-0"></div>
+        </div>
+        <!-- Conversation Area -->
+        <div class="flex-1 space-y-2 overflow-y-auto px-4 pt-4">
+            <!-- Privacy Notice -->
+            <p
+                class="pb-3 pt-1 text-center text-sm font-normal leading-normal text-text-light-secondary dark:text-text-dark-secondary">
+                Your chats are 100% private and stay between us.</p>
+            <!-- Chatbot Welcome Message -->
+            <div class="flex items-end gap-3">
+                <div
+                    class="size-10 shrink-0 rounded-full bg-bot-bubble-light dark:bg-bot-bubble-dark flex items-center justify-center">
+                    <span
+                        class="material-symbols-outlined text-2xl text-text-light-primary dark:text-text-dark-primary">spark</span>
+                </div>
+                <div class="flex flex-1 flex-col items-start gap-1">
+                    <p class="text-[13px] font-medium text-text-light-secondary dark:text-text-dark-secondary">AI
+                        Assistant</p>
+                    <p
+                        class="flex max-w-[85%] rounded-lg rounded-bl-none bg-bot-bubble-light px-4 py-3 text-base font-normal leading-normal text-text-light-primary dark:bg-bot-bubble-dark dark:text-text-dark-primary">
+                        Hi there! I'm here to help. Ask me anything you're curious about—it's completely private.</p>
+                </div>
+            </div>
+            <!-- User Message -->
+            <div class="flex items-end justify-end gap-3 pt-4">
+                <div class="flex flex-1 flex-col items-end gap-1">
+                    <p class="text-[13px] font-medium text-text-light-secondary dark:text-text-dark-secondary">You</p>
+                    <p
+                        class="flex max-w-[85%] rounded-lg rounded-br-none bg-user-bubble-light px-4 py-3 text-base font-normal leading-normal text-text-light-primary dark:bg-user-bubble-dark dark:text-white">
+                        How do I deal with stress before a big test?</p>
+                </div>
+                <div class="size-10 shrink-0 rounded-full bg-gray-300 dark:bg-gray-700 flex items-center justify-center"
+                    data-alt="User's initial avatar">
+                    <span class="text-xl font-bold text-text-light-primary dark:text-text-dark-primary">Y</span>
+                </div>
+            </div>
+            <!-- Chatbot Response -->
+            <div class="flex items-end gap-3 pt-4">
+                <div
+                    class="size-10 shrink-0 rounded-full bg-bot-bubble-light dark:bg-bot-bubble-dark flex items-center justify-center">
+                    <span
+                        class="material-symbols-outlined text-2xl text-text-light-primary dark:text-text-dark-primary">spark</span>
+                </div>
+                <div class="flex flex-1 flex-col items-start gap-1">
+                    <p class="text-[13px] font-medium text-text-light-secondary dark:text-text-dark-secondary">AI
+                        Assistant</p>
+                    <p
+                        class="flex max-w-[85%] rounded-lg rounded-bl-none bg-bot-bubble-light px-4 py-3 text-base font-normal leading-normal text-text-light-primary dark:bg-bot-bubble-dark dark:text-text-dark-primary">
+                        That's a great question. It's totally normal to feel stressed. Try breaking down your study
+                        material into smaller chunks and taking short breaks every 30 minutes.</p>
+                </div>
+            </div>
+            <!-- Typing Indicator -->
+            <div class="flex items-end gap-3 pt-4">
+                <div
+                    class="size-10 shrink-0 rounded-full bg-bot-bubble-light dark:bg-bot-bubble-dark flex items-center justify-center">
+                    <span
+                        class="material-symbols-outlined text-2xl text-text-light-primary dark:text-text-dark-primary">spark</span>
+                </div>
+                <div
+                    class="flex items-center gap-1.5 rounded-lg rounded-bl-none bg-bot-bubble-light px-4 py-3 dark:bg-bot-bubble-dark">
+                    <div class="h-2 w-2 animate-pulse rounded-full bg-gray-400 [animation-delay:-0.3s]"></div>
+                    <div class="h-2 w-2 animate-pulse rounded-full bg-gray-400 [animation-delay:-0.15s]"></div>
+                    <div class="h-2 w-2 animate-pulse rounded-full bg-gray-400"></div>
+                </div>
+            </div>
+        </div>
+        <!-- Quick Reply Buttons and Input Area -->
+        <div class="shrink-0 space-y-3 bg-background-light p-4 pt-2 dark:bg-background-dark">
+            <!-- Quick Reply Scroll -->
+            <div
+                class="flex w-full snap-x snap-mandatory scroll-pl-4 items-center gap-2 overflow-x-auto pb-2 [-ms-overflow-style:none] [scrollbar-width:none]">
+                <button
+                    class="shrink-0 snap-start whitespace-nowrap rounded-full border border-gray-300 bg-transparent px-4 py-2 text-sm font-medium text-text-light-primary transition-colors hover:bg-gray-100 dark:border-gray-700 dark:text-text-dark-primary dark:hover:bg-gray-800">What
+                    is puberty?</button>
+                <button
+                    class="shrink-0 snap-start whitespace-nowrap rounded-full border border-gray-300 bg-transparent px-4 py-2 text-sm font-medium text-text-light-primary transition-colors hover:bg-gray-100 dark:border-gray-700 dark:text-text-dark-primary dark:hover:bg-gray-800">How
+                    to deal with stress?</button>
+                <button
+                    class="shrink-0 snap-start whitespace-nowrap rounded-full border border-gray-300 bg-transparent px-4 py-2 text-sm font-medium text-text-light-primary transition-colors hover:bg-gray-100 dark:border-gray-700 dark:text-text-dark-primary dark:hover:bg-gray-800">Tips
+                    for self-confidence</button>
+                <button
+                    class="shrink-0 snap-start whitespace-nowrap rounded-full border border-gray-300 bg-transparent px-4 py-2 text-sm font-medium text-text-light-primary transition-colors hover:bg-gray-100 dark:border-gray-700 dark:text-text-dark-primary dark:hover:bg-gray-800">Managing
+                    emotions</button>
+            </div>
+            <!-- Chat Input -->
+            <div class="relative flex items-center">
+                <input
+                    class="w-full rounded-full border-gray-300 bg-gray-100 py-3 pl-5 pr-14 text-text-light-primary placeholder:text-text-light-secondary focus:border-primary focus:ring-2 focus:ring-primary/50 dark:border-gray-700 dark:bg-gray-800 dark:text-text-dark-primary dark:placeholder:text-text-dark-secondary dark:focus:border-primary"
+                    placeholder="Ask anything..." type="text" />
+                <button
+                    class="absolute right-2 flex size-9 items-center justify-center rounded-full bg-primary text-white transition-opacity hover:opacity-90 active:opacity-80">
+                    <span class="material-symbols-outlined text-xl">arrow_upward</span>
+                </button>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

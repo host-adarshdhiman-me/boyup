@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Guidance &amp; Stories</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Lexend:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "primary": "#5A7D8A",
+              "background-light": "#F5F5F3",
+              "background-dark": "#101622",
+              "card-light": "#FFFFFF",
+              "card-dark": "#1B1F27",
+              "muted-light": "#6b7280",
+              "muted-dark": "#9ca6ba",
+              "text-light": "#3D3D3D",
+              "text-dark": "#FFFFFF",
+            },
+            fontFamily: {
+              "display": ["Lexend", "sans-serif"]
+            },
+            borderRadius: {"DEFAULT": "0.5rem", "lg": "1rem", "xl": "1.5rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="font-display bg-background-light dark:bg-background-dark">
+<div class="relative flex h-auto min-h-screen w-full flex-col group/design-root overflow-x-hidden">
+<main class="flex-1 pb-24">
+<!-- Top App Bar -->
+<div class="flex items-center p-4 pb-2 bg-background-light dark:bg-background-dark sticky top-0 z-10">
+<div class="text-text-light dark:text-text-dark flex size-12 shrink-0 items-center justify-center">
+<a href="index.html"><span class="material-symbols-outlined text-3xl">arrow_back</span></a>
+</div>
+<h1 class="text-text-light dark:text-text-dark text-xl font-bold leading-tight tracking-[-0.015em] flex-1 text-center">Guidance &amp; Stories</h1>
+<div class="text-text-light dark:text-text-dark flex size-12 shrink-0 items-center justify-center">
+<span class="material-symbols-outlined text-3xl">notifications</span>
+</div>
+</div>
+<!-- Search Bar -->
+<div class="px-4 py-3">
+<label class="flex flex-col min-w-40 h-12 w-full">
+<div class="flex w-full flex-1 items-stretch rounded-xl h-full shadow-sm">
+<div class="text-muted-light dark:text-muted-dark flex border border-r-0 border-gray-200 dark:border-gray-700 bg-card-light dark:bg-card-dark items-center justify-center pl-4 rounded-l-xl">
+<span class="material-symbols-outlined">search</span>
+</div>
+<input class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-r-xl text-text-light dark:text-text-dark focus:outline-0 focus:ring-2 focus:ring-primary/50 border border-l-0 border-gray-200 dark:border-gray-700 bg-card-light dark:bg-card-dark h-full placeholder:text-muted-light dark:placeholder:text-muted-dark px-4 pl-2 text-base font-normal leading-normal" placeholder="Search topics or mentors" value=""/>
+</div>
+</label>
+</div>
+<!-- Main Action Cards -->
+<div class="p-4 @container space-y-4">
+<div class="flex flex-col items-stretch justify-start rounded-xl shadow-md bg-card-light dark:bg-card-dark overflow-hidden">
+<div class="w-full bg-center bg-no-repeat aspect-[2/1] bg-cover" data-alt="Abstract gradient of blue and green hues, suggesting calm conversation." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuA--TeiFiSlVYYqj8HL9P2AoZYYVrwOcjjbVOQPrCoVzc_bql2wP937-CEQ_jLs9byIBcvP26AoJ79hS3jw0EvgLTO8pYVWlNZfGiAOimxETCHFFM-mAAKJ9KBOMmXqrcTnO1kwwF3cdmyqoTU139Esl0oou3WHjPWaF0MvvWfOQdBPrbGEf6QKfk2lOkf8pSOa91J30ArhEKUyesmadVfuusx9uHs1TtQNbm3NKRnRsGZxK94jFJQnrUS0k6gDO-WaLZ4Ya2bkC08');"></div>
+<div class="flex w-full grow flex-col items-stretch justify-center gap-2 p-4">
+<p class="text-text-light dark:text-text-dark text-lg font-bold leading-tight tracking-[-0.015em]">Ask a Mentor</p>
+<p class="text-muted-light dark:text-muted-dark text-base font-normal leading-normal">Get confidential advice from a vetted mentor.</p>
+<div class="flex items-center justify-between pt-2">
+<p class="text-muted-light dark:text-muted-dark text-sm font-medium leading-normal bg-primary/10 text-primary px-2 py-1 rounded-full">Vetted Mentors</p>
+<button class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-xl h-10 px-4 bg-primary text-white text-sm font-medium leading-normal shadow-sm hover:opacity-90 transition-opacity">
+<span class="truncate">Ask a Question</span>
+</button>
+</div>
+</div>
+</div>
+<div class="flex flex-col items-stretch justify-start rounded-xl shadow-md bg-card-light dark:bg-card-dark overflow-hidden">
+<div class="w-full bg-center bg-no-repeat aspect-[2/1] bg-cover" data-alt="Warm, inviting image of a bookshelf, symbolizing stories and knowledge." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBiuxo68bWCJGkOXZnleggeqoS8XYCfUVoPhr8ZNMs5FlD9I0GEXyV9xjFBLUwpfXuvF5OlEDe4gZ-ZCfvQolqYBA-ke486E2UKX6pXn66h4aSZKrJtbK2uH1RnwNdcJR_g4Y0ncnrvTuriedMnvFIgNk5aH9bXm93z1mf-AoNfY62mumeNMAPDH9L7u8czsVxRQxvmg1SRAIobkMwU70vENjK3OnYnz87Dwez4YciQ44RXdZ1Lu0IVBS4HqRLW7SyHTn4DdEj9wfY');"></div>
+<div class="flex w-full grow flex-col items-stretch justify-center gap-2 p-4">
+<p class="text-text-light dark:text-text-dark text-lg font-bold leading-tight tracking-[-0.015em]">Featured Stories</p>
+<p class="text-muted-light dark:text-muted-dark text-base font-normal leading-normal">Read real stories from guys like you. The latest is "How I Handled Exam Stress".</p>
+<div class="flex items-end justify-end pt-2">
+<button class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-xl h-10 px-4 bg-primary text-white text-sm font-medium leading-normal shadow-sm hover:opacity-90 transition-opacity">
+<span class="truncate">Read More</span>
+</button>
+</div>
+</div>
+</div>
+<div class="flex flex-col items-stretch justify-start rounded-xl shadow-md bg-card-light dark:bg-card-dark overflow-hidden">
+<div class="w-full bg-center bg-no-repeat aspect-[2/1] bg-cover" data-alt="A clean, minimalist calendar and clock, representing scheduling and time management." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuD6_6TWzVHmlaRryAbwJFiMvO9RHKC8JTNgH8wqs7PR73OzM52VcibP32CANJJr2gtOxyOtcWn047VpKRv6f8YCLDEOUgj_n3uDdeHPUR-bINMuAjAbhd63vl_2o6rM1yLzVFRIzH_lOpSAr642rPYnqHdscCATtzU5DQw3alW0anHj6kCeIzGoiUPU7bgArbn0rq1ECP6bhPuwIrR74tJLfZ1p-dTOatJRrMzewEn-y6rJgH7nbM9dvejcRDH3ff0Uo5zAuWxIrWc');"></div>
+<div class="flex w-full grow flex-col items-stretch justify-center gap-2 p-4">
+<p class="text-text-light dark:text-text-dark text-lg font-bold leading-tight tracking-[-0.015em]">Book a Mentorship Session</p>
+<p class="text-muted-light dark:text-muted-dark text-base font-normal leading-normal">Schedule a one-on-one session to talk about what's on your mind.</p>
+<div class="flex items-center justify-between pt-2">
+<p class="text-muted-light dark:text-muted-dark text-sm font-medium leading-normal bg-primary/10 text-primary px-2 py-1 rounded-full">One-on-One</p>
+<button class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-xl h-10 px-4 bg-primary text-white text-sm font-medium leading-normal shadow-sm hover:opacity-90 transition-opacity">
+<span class="truncate">Book Now</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<!-- Mentor Preview Section -->
+<div class="py-4">
+<h3 class="text-text-light dark:text-text-dark text-lg font-bold leading-tight tracking-[-0.015em] px-4 pb-3">Meet the Mentors</h3>
+<div class="flex w-full snap-x snap-mandatory gap-4 overflow-x-auto px-4 pb-2">
+<div class="flex w-40 shrink-0 snap-center flex-col items-center gap-3 rounded-xl bg-card-light dark:bg-card-dark p-4 shadow-md">
+<img class="h-20 w-20 shrink-0 rounded-full object-cover" data-alt="Profile picture of mentor Alex P." src="https://lh3.googleusercontent.com/aida-public/AB6AXuArTdyxtFd9Hd0nxXSmDPOCzmnueKmC4m51QTk21xhLvi35qC0ZRpoLeH3aZNhWoNfK3uElextYF6mAqqL0Vxfc5tJVUy0t3JRZrl9hmxpyn3rlIPiHyHo855pQ2bmCCIw25eXQGwP21fMG_c35-ekcbCBpaI8Z6V4CzGPcx6BR8NLSBRT81NGLYn9aAknOu1KncwO-HVLZfAL1eC-mSoDIcsZMIyrPOA7BDpwuw8-2EQS64lP2ieURezX5bVwgzpNbhxvI2DK23AA"/>
+<div class="flex flex-col items-center text-center">
+<p class="text-text-light dark:text-text-dark font-bold">Alex P.</p>
+<p class="text-muted-light dark:text-muted-dark text-sm">College Student &amp; Coach</p>
+</div>
+</div>
+<div class="flex w-40 shrink-0 snap-center flex-col items-center gap-3 rounded-xl bg-card-light dark:bg-card-dark p-4 shadow-md">
+<img class="h-20 w-20 shrink-0 rounded-full object-cover" data-alt="Profile picture of mentor David R." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDHtB1Q00cRm3UxwhCLQBWN6WH6syre9d01FH28TjTKT94qUFa5V4iVFJT_3pmtz1Va0mU5i4nfyGWNQIR4kqLj7DUe3_gXxK6uMtTg2DAz7V0x8kY4ygZsaVBij3jTKAm4yzHt2NGveq0xpOVvCfQpmOjn1kVBIvbeBd5do8Kq1LTPOS7bOeqYwJQIswcd08efEbqvcbEHvetCHjT7Is4agnWfdlDlyyE0oU-DWGThnJujEJXUyp-htyOTSAUa_3qKUitTy8iggiw"/>
+<div class="flex flex-col items-center text-center">
+<p class="text-text-light dark:text-text-dark font-bold">David R.</p>
+<p class="text-muted-light dark:text-muted-dark text-sm">Software Engineer</p>
+</div>
+</div>
+<div class="flex w-40 shrink-0 snap-center flex-col items-center gap-3 rounded-xl bg-card-light dark:bg-card-dark p-4 shadow-md">
+<img class="h-20 w-20 shrink-0 rounded-full object-cover" data-alt="Profile picture of mentor Sam J." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCzwf_LXUBYQ-M3XJrxnqMJGXrly6uiFR_oitk7fSz97L-6NxtQPwxQmZVR-UvZ1SpMvM1iO_aIPibIQFoalUwfwyw4BsZhxdTRJ42fj_zMGT0SFLg885QWcuGnBDQX42bAZ8GnZkS6sitqxUbVRG0cqkqXvAh9zwjie9IAT09btHQcNgPs60ZnYrhK_r92pUDmPhrAld76VDZL_l-k_np801q_3H4J4PfkyRnk5zmUUoaaV7duC3QgV_G6TJ9DL7emij7gDy093qs"/>
+<div class="flex flex-col items-center text-center">
+<p class="text-text-light dark:text-text-dark font-bold">Sam J.</p>
+<p class="text-muted-light dark:text-muted-dark text-sm">Fitness Instructor</p>
+</div>
+</div>
+<div class="flex w-40 shrink-0 snap-center flex-col items-center gap-3 rounded-xl bg-card-light dark:bg-card-dark p-4 shadow-md">
+<img class="h-20 w-20 shrink-0 rounded-full object-cover" data-alt="Profile picture of mentor Ben K." src="https://lh3.googleusercontent.com/aida-public/AB6AXuC6kbY2ttcnvzFUVQm6Xr1ZaGd4Qlj714-P0i-0Is_uYmos1VJgb8NAujvgeuGu1HNaLT0JBlm-YpNfkQNytKQgGBfgQVg8oPbmuHoSZbrizHiHCCh2KnZp5t3rwMyj_hTAf4LthNRWEQNe_NC4h9zd7k7uMQpjgPaQvbk4KbUZzdzLcKW0pSL2fryPChBINUVn101vcztTrMWr0OBjFkNYiDZYfZd4JatyGoBKfPKos9LRdGn0t1b2k1-red7TtdOGWqoqH9vWtJQ"/>
+<div class="flex flex-col items-center text-center">
+<p class="text-text-light dark:text-text-dark font-bold">Ben K.</p>
+<p class="text-muted-light dark:text-muted-dark text-sm">Graphic Designer</p>
+</div>
+</div>
+</div>
+</div>
+</main>
+<!-- Bottom Navigation Bar -->
+<nav class="fixed bottom-0 left-0 right-0 border-t border-gray-200 dark:border-gray-800 bg-card-light/80 dark:bg-card-dark/80 backdrop-blur-lg">
+<div class="mx-auto flex h-20 max-w-md items-center justify-around px-2">
+<a class="flex flex-col items-center justify-center gap-1 text-muted-light dark:text-muted-dark hover:text-primary dark:hover:text-primary transition-colors" href="#">
+<span class="material-symbols-outlined text-3xl">home</span>
+<span class="text-xs font-medium">Home</span>
+</a>
+<a class="flex flex-col items-center justify-center gap-1 text-primary dark:text-primary transition-colors" href="#">
+<span class="material-symbols-outlined text-3xl">groups</span>
+<span class="text-xs font-bold">Connect</span>
+</a>
+<a class="flex flex-col items-center justify-center gap-1 text-muted-light dark:text-muted-dark hover:text-primary dark:hover:text-primary transition-colors" href="#">
+<span class="material-symbols-outlined text-3xl">checklist</span>
+<span class="text-xs font-medium">Goals</span>
+</a>
+<a class="flex flex-col items-center justify-center gap-1 text-muted-light dark:text-muted-dark hover:text-primary dark:hover:text-primary transition-colors" href="#">
+<span class="material-symbols-outlined text-3xl">person</span>
+<span class="text-xs font-medium">Profile</span>
+</a>
+</div>
+</nav>
+</div>
+</body></html>

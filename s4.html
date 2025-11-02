@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>The Hub - Learning Library</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Lexend:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<style>
+    body {
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+  </style>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "primary": "#0df280",
+            "background-light": "#f5f8f7",
+            "background-dark": "#102219",
+          },
+          fontFamily: {
+            "display": ["Lexend", "sans-serif"]
+          },
+          borderRadius: {
+            "DEFAULT": "0.5rem",
+            "lg": "1rem",
+            "xl": "1.5rem",
+            "full": "9999px"
+          },
+        },
+      },
+    }
+  </script>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-display">
+<div class="relative flex h-auto min-h-screen w-full flex-col bg-background-light dark:bg-background-dark overflow-x-hidden">
+<!-- Top App Bar -->
+<div class="sticky top-0 z-10 w-full bg-background-light dark:bg-background-dark">
+<div class="flex items-center p-4">
+<a class="flex size-12 shrink-0 items-center justify-start">
+<a href="index.html"><span class="material-symbols-outlined text-gray-800 dark:text-white">arrow_back</span></a>
+
+<h1 class="flex-1 text-center text-lg font-bold tracking-[-0.015em] text-gray-900 dark:text-white">The Hub</h1>
+<div class="flex w-12 items-center justify-end">
+<button class="flex h-12 cursor-pointer items-center justify-center overflow-hidden rounded-xl bg-transparent p-0 text-gray-800 dark:text-white">
+<span class="material-symbols-outlined">account_circle</span>
+</button>
+</div>
+</div>
+</div>
+<main class="flex flex-col gap-4 px-4 pb-24">
+<!-- Search Bar -->
+<div class="py-2">
+<label class="flex h-12 w-full min-w-40 flex-col">
+<div class="flex h-full w-full flex-1 items-stretch rounded-xl bg-gray-100 dark:bg-[#1b2721]">
+<div class="flex items-center justify-center pl-4 text-gray-500 dark:text-[#9cbaab]">
+<span class="material-symbols-outlined">search</span>
+</div>
+<input class="form-input h-full min-w-0 flex-1 resize-none overflow-hidden rounded-r-xl border-none bg-transparent px-2 text-base font-normal leading-normal text-gray-900 placeholder:text-gray-500 dark:text-white dark:placeholder:text-[#9cbaab] focus:outline-0 focus:ring-0" placeholder="Search tips on confidence, friendship..." value=""/>
+</div>
+</label>
+</div>
+<!-- Chips / Filters -->
+<div class="flex gap-3 overflow-x-auto pb-2 [-ms-overflow-style:none] [scrollbar-width:none] [&amp;::-webkit-scrollbar]:hidden">
+<button class="flex h-8 shrink-0 items-center justify-center gap-x-2 rounded-full bg-primary px-4 text-[#111814]">
+<p class="text-sm font-medium leading-normal">All</p>
+</button>
+<button class="flex h-8 shrink-0 items-center justify-center gap-x-2 rounded-full bg-gray-200 dark:bg-[#283930] px-4 text-gray-800 dark:text-white">
+<p class="text-sm font-medium leading-normal">Mind</p>
+</button>
+<button class="flex h-8 shrink-0 items-center justify-center gap-x-2 rounded-full bg-gray-200 dark:bg-[#283930] px-4 text-gray-800 dark:text-white">
+<p class="text-sm font-medium leading-normal">Body</p>
+</button>
+<button class="flex h-8 shrink-0 items-center justify-center gap-x-2 rounded-full bg-gray-200 dark:bg-[#283930] px-4 text-gray-800 dark:text-white">
+<p class="text-sm font-medium leading-normal">Social</p>
+</button>
+<button class="flex h-8 shrink-0 items-center justify-center gap-x-2 rounded-full bg-gray-200 dark:bg-[#283930] px-4 text-gray-800 dark:text-white">
+<p class="text-sm font-medium leading-normal">Quick Tips</p>
+</button>
+</div>
+<!-- Content Cards -->
+<div class="flex flex-col gap-4">
+<!-- Card 1 -->
+<div class="w-full @container">
+<div class="flex flex-col items-stretch justify-start rounded-xl bg-white shadow-sm dark:bg-[#1b2721]">
+<div class="relative w-full aspect-[2/1] rounded-t-xl bg-gray-200 dark:bg-gray-800">
+<div class="absolute inset-0 flex items-center justify-center">
+<span class="material-symbols-outlined text-5xl text-gray-400 dark:text-gray-600">psychology</span>
+</div>
+</div>
+<div class="flex w-full min-w-72 grow flex-col items-stretch justify-center gap-2 p-4">
+<p class="text-sm font-normal leading-normal text-gray-500 dark:text-[#9cbaab]">Mind • 5 min read</p>
+<p class="text-lg font-bold leading-tight tracking-[-0.015em] text-gray-900 dark:text-white">Handling Stress Before a Big Game</p>
+<div class="flex items-end justify-between gap-3 pt-1">
+<p class="flex-1 text-base font-normal leading-normal text-gray-600 dark:text-[#9cbaab]">Simple tricks to calm your nerves and focus.</p>
+<button class="flex h-10 min-w-[100px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg bg-primary px-4 text-sm font-bold leading-normal text-[#111814]">
+<span class="truncate">Read More</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<!-- Card 2 -->
+<div class="w-full @container">
+<div class="flex flex-col items-stretch justify-start rounded-xl bg-white shadow-sm dark:bg-[#1b2721]">
+<div class="relative w-full aspect-[2/1] rounded-t-xl bg-gray-200 dark:bg-gray-800">
+<div class="absolute inset-0 flex items-center justify-center">
+<span class="material-symbols-outlined text-5xl text-gray-400 dark:text-gray-600">spa</span>
+</div>
+</div>
+<div class="flex w-full min-w-72 grow flex-col items-stretch justify-center gap-2 p-4">
+<p class="text-sm font-normal leading-normal text-gray-500 dark:text-[#9cbaab]">Body • 3 min read</p>
+<p class="text-lg font-bold leading-tight tracking-[-0.015em] text-gray-900 dark:text-white">Skincare Basics That Actually Work</p>
+<div class="flex items-end justify-between gap-3 pt-1">
+<p class="flex-1 text-base font-normal leading-normal text-gray-600 dark:text-[#9cbaab]">Build a simple, effective routine for clear skin.</p>
+<button class="flex h-10 min-w-[100px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg bg-primary px-4 text-sm font-bold leading-normal text-[#111814]">
+<span class="truncate">Read More</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<!-- Card 3 -->
+<div class="w-full @container">
+<div class="flex flex-col items-stretch justify-start rounded-xl bg-white shadow-sm dark:bg-[#1b2721]">
+<div class="relative w-full aspect-[2/1] rounded-t-xl bg-gray-200 dark:bg-gray-800">
+<div class="absolute inset-0 flex items-center justify-center">
+<span class="material-symbols-outlined text-5xl text-gray-400 dark:text-gray-600">groups</span>
+</div>
+</div>
+<div class="flex w-full min-w-72 grow flex-col items-stretch justify-center gap-2 p-4">
+<p class="text-sm font-normal leading-normal text-gray-500 dark:text-[#9cbaab]">Social • 6 min read</p>
+<p class="text-lg font-bold leading-tight tracking-[-0.015em] text-gray-900 dark:text-white">What is Healthy Masculinity?</p>
+<div class="flex items-end justify-between gap-3 pt-1">
+<p class="flex-1 text-base font-normal leading-normal text-gray-600 dark:text-[#9cbaab]">Exploring strength in kindness and respect.</p>
+<button class="flex h-10 min-w-[100px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg bg-primary px-4 text-sm font-bold leading-normal text-[#111814]">
+<span class="truncate">Read More</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+</main>
+<!-- Bottom Navigation Bar -->
+<div class="fixed bottom-0 left-0 z-10 w-full border-t border-gray-200 bg-white/80 backdrop-blur-lg dark:border-gray-800 dark:bg-[#1b2721]/80">
+<div class="grid h-16 max-w-lg grid-cols-4 mx-auto font-medium">
+<button class="inline-flex flex-col items-center justify-center px-5 hover:bg-gray-50 dark:hover:bg-gray-800 group" type="button">
+<span class="material-symbols-outlined text-gray-500 dark:text-gray-400 group-hover:text-primary dark:group-hover:text-primary">home</span>
+<span class="text-xs text-gray-500 dark:text-gray-400 group-hover:text-primary dark:group-hover:text-primary">Home</span>
+</button>
+<button class="inline-flex flex-col items-center justify-center px-5 hover:bg-gray-50 dark:hover:bg-gray-800 group" type="button">
+<span class="material-symbols-outlined text-primary dark:text-primary">local_library</span>
+<span class="text-xs text-primary dark:text-primary">Library</span>
+</button>
+<button class="inline-flex flex-col items-center justify-center px-5 hover:bg-gray-50 dark:hover:bg-gray-800 group" type="button">
+<span class="material-symbols-outlined text-gray-500 dark:text-gray-400 group-hover:text-primary dark:group-hover:text-primary">forum</span>
+<span class="text-xs text-gray-500 dark:text-gray-400 group-hover:text-primary dark:group-hover:text-primary">Community</span>
+</button>
+<button class="inline-flex flex-col items-center justify-center px-5 hover:bg-gray-50 dark:hover:bg-gray-800 group" type="button">
+<span class="material-symbols-outlined text-gray-500 dark:text-gray-400 group-hover:text-primary dark:group-hover:text-primary">settings</span>
+<span class="text-xs text-gray-500 dark:text-gray-400 group-hover:text-primary dark:group-hover:text-primary">Settings</span>
+</button>
+</div>
+</div>
+</div>
+</body></html>

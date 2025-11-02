@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Your Daily Guide</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+<script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#2b8cee",
+                        "background-light": "#f6f7f8",
+                        "background-dark": "#101922",
+                    },
+                    fontFamily: {
+                        "display": ["Manrope", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.5rem",
+                        "lg": "1rem",
+                        "xl": "1.5rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-display">
+<div class="relative flex h-auto min-h-screen w-full flex-col group/design-root overflow-x-hidden">
+<div class="w-full max-w-md mx-auto flex flex-col">
+<!-- Top App Bar -->
+<header class="flex items-center bg-background-light dark:bg-background-dark p-4 pb-2 justify-between sticky top-0 z-10">
+<div class="text-slate-800 dark:text-white flex size-12 shrink-0 items-center">
+<a href="index.html"><span class="material-symbols-outlined text-2xl">arrow_back</span></a>
+</div>
+<h1 class="text-slate-900 dark:text-white text-lg font-bold leading-tight tracking-[-0.015em] flex-1 text-center">Your Daily Guide</h1>
+<div class="flex w-12 items-center justify-end">
+<button class="flex max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-xl h-12 bg-transparent text-slate-800 dark:text-white gap-2 text-base font-bold leading-normal tracking-[0.015em] min-w-0 p-0">
+<span class="material-symbols-outlined text-2xl">tune</span>
+</button>
+</div>
+</header>
+<!-- Chips / Filters -->
+<div class="px-4 py-2">
+<div class="flex gap-3 overflow-x-auto pb-2 -mx-4 px-4">
+<div class="flex h-8 shrink-0 items-center justify-center gap-x-2 rounded-full bg-primary pl-4 pr-4"><p class="text-white text-sm font-medium leading-normal">All</p></div>
+<div class="flex h-8 shrink-0 items-center justify-center gap-x-2 rounded-full bg-slate-200 dark:bg-slate-800 pl-4 pr-4"><p class="text-slate-700 dark:text-slate-300 text-sm font-medium leading-normal">Confidence</p></div>
+<div class="flex h-8 shrink-0 items-center justify-center gap-x-2 rounded-full bg-slate-200 dark:bg-slate-800 pl-4 pr-4"><p class="text-slate-700 dark:text-slate-300 text-sm font-medium leading-normal">Respect</p></div>
+<div class="flex h-8 shrink-0 items-center justify-center gap-x-2 rounded-full bg-slate-200 dark:bg-slate-800 pl-4 pr-4"><p class="text-slate-700 dark:text-slate-300 text-sm font-medium leading-normal">Discipline</p></div>
+<div class="flex h-8 shrink-0 items-center justify-center gap-x-2 rounded-full bg-slate-200 dark:bg-slate-800 pl-4 pr-4"><p class="text-slate-700 dark:text-slate-300 text-sm font-medium leading-normal">Social</p></div>
+<div class="flex h-8 shrink-0 items-center justify-center gap-x-2 rounded-full bg-slate-200 dark:bg-slate-800 pl-4 pr-4"><p class="text-slate-700 dark:text-slate-300 text-sm font-medium leading-normal">Mindfulness</p></div>
+</div>
+</div>
+<!-- Main Content: Advice Cards -->
+<main class="flex flex-col gap-4 p-4 pt-2">
+<!-- Card 1: Handling Anger -->
+<div class="flex flex-col items-stretch justify-start rounded-xl bg-white dark:bg-slate-900/70 shadow-sm @container">
+<div class="w-full bg-center bg-no-repeat aspect-[2/1] bg-cover rounded-t-xl" data-alt="Abstract gradient of calming blue and purple tones" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCerBxiZ6iqaFwXllqHukqukjM6PiR5OMf8jEXT-180cQBBEQRhnfLMU9HqoL7RS0SBIoeHJ0oa1lxZzO-rWltrv4LxOHoywgX2F7hV9NvPv_bSIfKXBo0cv9hHl2FKyWe_q71aRvz0iIkp04hskERxYvUFSWFep0YTSihBP7gvCtD3nkKrskjvXGfyx4VZmcVQLYkg0QEzdGfDh5i9YxcwP0_tX6jIv9B6KbV3A2ycoq2WSulOyuEnDXAWlcgumOaVia4VSuSnySA");'></div>
+<div class="flex w-full min-w-72 grow flex-col items-stretch justify-center gap-2 p-4">
+<div class="flex items-center justify-between">
+<p class="text-slate-500 dark:text-slate-400 text-sm font-semibold leading-normal">Handling Anger</p>
+<span class="material-symbols-outlined text-slate-500 dark:text-slate-400">bookmark_border</span>
+</div>
+<p class="text-slate-900 dark:text-white text-lg font-bold leading-tight tracking-[-0.015em]">Cool heads build strong futures.</p>
+<p class="text-slate-600 dark:text-slate-400 text-base font-normal leading-normal mt-1">Discover ways to manage your emotions constructively.</p>
+<button class="flex min-w-[84px] max-w-[480px] mt-4 cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-primary text-white text-sm font-bold leading-normal w-full">
+<span class="truncate">Learn How</span>
+</button>
+</div>
+</div>
+<!-- Card 2: Confidence -->
+<div class="flex flex-col items-stretch justify-start rounded-xl bg-white dark:bg-slate-900/70 shadow-sm @container">
+<div class="w-full bg-center bg-no-repeat aspect-[2/1] bg-cover rounded-t-xl" data-alt="Abstract image with warm orange and yellow geometric shapes" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCQK9eGs6Uo_FV1Ft8-YN5n6r9gS2CdWR9-pEWP64n04eDipEeJz1z5iT4NqLp0MCcWMiPweOQM_WJcCT-CVfrzMbJP_z1DvurzfeZ8RVnv8Vqd24VFvaeBHJKNbBMPOhPXubXY4bFzX023fa9jeh75kswZT2ZT4ioN78kKh5-CdwbvjKgsrXL5fYXkHLVYoeSRvuBxo73dRaZPgkCvFzYTp7QpZ2GZ20dnQfQy9FAPIHW4E_YdyhwqgO6hySuGa1WrbwXkuKtBl1I");'></div>
+<div class="flex w-full min-w-72 grow flex-col items-stretch justify-center gap-2 p-4">
+<div class="flex items-center justify-between">
+<p class="text-slate-500 dark:text-slate-400 text-sm font-semibold leading-normal">Confidence</p>
+<span class="material-symbols-outlined text-slate-500 dark:text-slate-400">bookmark_border</span>
+</div>
+<p class="text-slate-900 dark:text-white text-lg font-bold leading-tight tracking-[-0.015em]">Your value doesn't decrease based on someone's inability to see your worth.</p>
+<p class="text-slate-600 dark:text-slate-400 text-base font-normal leading-normal mt-1">Explore practical steps to build lasting self-confidence.</p>
+<button class="flex min-w-[84px] max-w-[480px] mt-4 cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-primary text-white text-sm font-bold leading-normal w-full">
+<span class="truncate">Explore</span>
+</button>
+</div>
+</div>
+<!-- Card 3: Respect -->
+<div class="flex flex-col items-stretch justify-start rounded-xl bg-white dark:bg-slate-900/70 shadow-sm @container">
+<div class="w-full bg-center bg-no-repeat aspect-[2/1] bg-cover rounded-t-xl" data-alt="Abstract image with a supportive green and teal wave pattern" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCFF2NboJyq18g9zfAD12QQB-i4n6TmpOps1yMs02O_3hlYw2TNuXDHhEveHHm_covjvmIgrYIMJB4OFLUuQaACVekSOeGTC7PSKQRAQDz6zSC2vkZPb0kl-sCWRc3JLope5z-1MhYnQZeF-qxBFwy4BPVTBeOD1qdzC7frzdctu1aDRrt9yeTThlehSQqk_QdmKLGxhlayLOlcZHrWdnUySrpu7WI6OsqIWaHjNAhXGIeo-4ZAaDK40FTZwcoG1MLZnyJpnPi8mSg");'></div>
+<div class="flex w-full min-w-72 grow flex-col items-stretch justify-center gap-2 p-4">
+<div class="flex items-center justify-between">
+<p class="text-slate-500 dark:text-slate-400 text-sm font-semibold leading-normal">Respect</p>
+<span class="material-symbols-outlined text-slate-500 dark:text-slate-400">bookmark</span>
+</div>
+<p class="text-slate-900 dark:text-white text-lg font-bold leading-tight tracking-[-0.015em]">Listen to understand, not just to reply.</p>
+<p class="text-slate-600 dark:text-slate-400 text-base font-normal leading-normal mt-1">Learn the power of active listening in all your relationships.</p>
+<button class="flex min-w-[84px] max-w-[480px] mt-4 cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-primary text-white text-sm font-bold leading-normal w-full">
+<span class="truncate">Learn More</span>
+</button>
+</div>
+</div>
+</main>
+<!-- Bottom Navigation Bar -->
+<nav class="sticky bottom-0 z-10 bg-white/80 dark:bg-slate-900/80 backdrop-blur-md border-t border-slate-200 dark:border-slate-800 mt-auto">
+<div class="flex justify-around items-center h-16 px-2">
+<button class="flex flex-col items-center justify-center gap-1 text-primary w-16">
+<span class="material-symbols-outlined">home</span>
+<span class="text-xs font-bold">Home</span>
+</button>
+<button class="flex flex-col items-center justify-center gap-1 text-slate-500 dark:text-slate-400 w-16">
+<span class="material-symbols-outlined">bar_chart</span>
+<span class="text-xs font-medium">Progress</span>
+</button>
+<button class="flex flex-col items-center justify-center gap-1 text-slate-500 dark:text-slate-400 w-16">
+<span class="material-symbols-outlined">bookmarks</span>
+<span class="text-xs font-medium">Saved</span>
+</button>
+<button class="flex flex-col items-center justify-center gap-1 text-slate-500 dark:text-slate-400 w-16">
+<span class="material-symbols-outlined">settings</span>
+<span class="text-xs font-medium">Settings</span>
+</button>
+</div>
+</nav>
+</div>
+</div>
+</body></html>
