@@ -7,10 +7,7 @@
   <meta content="width=device-width, initial-scale=1.0" name="viewport" />
   <title>Dashboard</title>
   <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-  <link href="https://fonts.googleapis.com" rel="preconnect" />
-  <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;700;800&amp;display=swap"
-    rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@400;500;700&amp;display=swap" rel="stylesheet" />
   <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
   <script id="tailwind-config">
     tailwind.config = {
@@ -18,20 +15,12 @@
       theme: {
         extend: {
           colors: {
-            "primary": "#13c8ec",
-            "background-light": "#f6f8f8",
-            "background-dark": "#101f22",
-            "text-light": "#111718",
-            "text-dark": "#e3e3e3",
-            "card-light": "#ffffff",
-            "card-dark": "#1a2c30",
-            "subtle-light": "#618389",
-            "subtle-dark": "#a0b4b8",
-            "border-light": "#dbe4e6",
-            "border-dark": "#2a3f44"
+            "primary": "#3d7af5",
+            "background-light": "#f5f6f8",
+            "background-dark": "#101622",
           },
           fontFamily: {
-            "display": ["Plus Jakarta Sans", "sans-serif"]
+            "display": ["Lexend"]
           },
           borderRadius: { "DEFAULT": "0.5rem", "lg": "1rem", "xl": "1.5rem", "full": "9999px" },
         },
@@ -39,13 +28,18 @@
     }
   </script>
   <style>
-    .material-symbols-outlined {
-      font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
-      font-size: 24px;
+    body {
+      background-image:
+        radial-gradient(circle at 1px 1px, hsla(0, 0%, 0%, 0.025) 1px, transparent 0),
+        radial-gradient(circle at 1px 1px, hsla(0, 0%, 0%, 0.025) 1px, transparent 0);
+      background-size: 20px 20px;
+      background-position: 0 0, 10px 10px;
     }
 
-    .material-symbols-outlined.fill {
-      font-variation-settings: 'FILL' 1;
+    .dark body {
+      background-image:
+        radial-gradient(circle at 1px 1px, hsla(0, 0%, 100%, 0.025) 1px, transparent 0),
+        radial-gradient(circle at 1px 1px, hsla(0, 0%, 100%, 0.025) 1px, transparent 0);
     }
   </style>
   <style>
@@ -57,139 +51,145 @@
 
 <body class="bg-background-light dark:bg-background-dark font-display">
   <div class="relative flex min-h-screen w-full flex-col group/design-root overflow-x-hidden">
-    <!-- Main Content -->
-    <main class="flex-grow pb-24">
-      <!-- Top App Bar / Header -->
-      <div class="flex flex-col gap-2 p-4 pb-2">
-        <div class="flex items-center h-12 justify-between">
-          <div class="flex size-12 shrink-0 items-center justify-center">
-            <img alt="App logo illustration" class="h-8 w-8"
-              src="https://lh3.googleusercontent.com/aida-public/AB6AXuDASGa5rNUyegxRb1FjKVsL-znrwgQfB7T-wVRK065xMkzKCZPROKEr4ACp9Zlu7vD5sf4Ji1gPdiWxaAue3u82klMyUSTXu4URMtSt7Enxn-le63Nrhtv1Ro1cMP7YGc-X2iekNzLek-wH7jBf92ZA20mqtriLQJZ3fXP-I_3yE9w5PDmxMk3WT20sw69RnuLOnJLYdaSU4SCz8KeZDLP58LHLf5Jzg52hSMreQ7noxyOmElbk1w7queZ-95s1B-abpvTsb-ylgY0" />
-          </div>
-          <div class="flex w-12 items-center justify-end">
-            <button
-              class="flex cursor-pointer items-center justify-center overflow-hidden rounded-full h-10 w-10 bg-primary/20 text-primary dark:text-primary">
-              <span class="material-symbols-outlined">person</span>
-            </button>
-          </div>
+    <!-- Top App Bar -->
+    <header
+      class="flex items-center bg-background-light dark:bg-background-dark p-4 pb-2 justify-between sticky top-0 z-10">
+      <div class="flex size-12 shrink-0 items-center">
+        <div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-10" data-alt="User profile picture"
+          style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuClVBMDmlSd9CXdeT5UqiVjJMbK_BY8zHSqFOC56BfHLKpPosimAJuCLYI8SYPMefgyvHdDh04HgtqG846ikrgoNh8bYB_3LuhWgJIP5-W75yKQ9lm3lTr4Z2RElSDvFSLlmxJzCpnspVewKij97b_Otu3KJ6i2PSsaaa3yyv2JZULTSCb75YuLXkrOg9eLL-9dlo-NYG0ktXmkGJW3EZP5_vTx6-LedldmYpu1Sbm2NZMbwrkHrM0EvizCEcGb-Jtyi92ogmeBUYc");'>
         </div>
-        <p class="text-text-light dark:text-text-dark tracking-light text-[28px] font-bold leading-tight">Hey bro 👋
-          ready to grow today?</p>
       </div>
-      <!-- Quote Card -->
+      <h1 class="text-xl font-bold leading-tight tracking-[-0.015em] flex-1 text-slate-800 dark:text-slate-100">Hey bro
+        👋</h1>
+      <div class="flex w-12 items-center justify-end">
+        <button
+          class="flex max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-xl h-12 bg-transparent text-slate-800 dark:text-slate-100 gap-2 text-base font-bold leading-normal tracking-[0.015em] min-w-0 p-0">
+          <span class="material-symbols-outlined text-slate-500 dark:text-slate-400">notifications</span>
+        </button>
+      </div>
+    </header>
+    <main class="flex-grow pb-24">
+      <!-- Body Text -->
+      <p class="text-slate-600 dark:text-slate-400 text-base font-normal leading-normal pb-3 pt-1 px-4">Ready to grow
+        today?</p>
+      <!-- Card -->
       <div class="p-4 @container">
         <div
-          class="flex flex-col items-start justify-start rounded-xl bg-card-light dark:bg-card-dark @xl:flex-row @xl:items-start overflow-hidden border border-border-light dark:border-border-dark shadow-sm">
-          <div class="relative w-full @xl:w-1/3 aspect-[4/3] @xl:aspect-square bg-center bg-no-repeat bg-cover"
-            data-alt="Abstract gradient illustration with soft, calming colors like blue and beige, representing self-growth."
-            style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDMb800Zx4_-QiTvU-re6-vRX2BFxPo2yc6me5JoZ10Mk14npk6_rup9SJ03vI92WsiGiSPY_7qbraThLfdCNafGD0qL2DqEPH8S0HeyZ1koyVf-OYmOLt5-rJwChemt-Qul45DbNx4CFcwDd6o5sIzkmLujvSSY__uWSv4XbK-FuxuJhk3MaMtyk-omjaL3T-p2jCpEz0D5-Oiw2v2rnURmEvHWqqfeg5iX_ynfyODQnzE5hO4SgWVwOFxFVb4Vb25YE9pnTHwn8Q");'>
-            <div class="absolute inset-0 bg-primary/20"></div>
-          </div>
-          <div class="flex w-full min-w-72 grow flex-col items-stretch justify-center gap-1 p-4 @xl:p-6">
-            <p class="text-primary text-base font-bold leading-tight tracking-[-0.015em]">Quote of the Day</p>
+          class="flex flex-col items-stretch justify-start rounded-xl @xl:flex-row @xl:items-start bg-amber-500/20 dark:bg-amber-500/10 border border-amber-500/30 dark:border-amber-500/20">
+          <div class="flex w-full grow flex-col items-stretch justify-center gap-1 p-4">
+            <p class="text-amber-800 dark:text-amber-200 text-lg font-bold leading-tight tracking-[-0.015em]">Quote of
+              the Day</p>
             <div class="flex items-end gap-3 justify-between">
-              <p class="text-subtle-light dark:text-subtle-dark text-base font-normal leading-normal">
-                "The greatest glory in living lies not in never falling, but in rising every time we fall." - Nelson
-                Mandela
-              </p>
+              <div class="flex flex-col gap-1">
+                <p class="text-amber-700 dark:text-amber-300 text-base font-normal leading-normal">"The only way to do
+                  great work is to love what you do."</p>
+                <p class="text-amber-600 dark:text-amber-400 text-sm font-normal leading-normal">- Steve Jobs</p>
+              </div>
             </div>
           </div>
         </div>
       </div>
-      <!-- Text Grid / Feature Cards -->
+      <!-- Text Grid -->
       <a href="screen2.html">
         <div class="grid grid-cols-[repeat(auto-fit,minmax(158px,1fr))] gap-4 p-4">
           <div
-            class="flex flex-1 gap-3 rounded-xl border border-border-light dark:border-border-dark bg-card-light dark:bg-card-dark p-4 flex-col shadow-sm">
-            <span class="material-symbols-outlined text-primary">spa</span>
+            class="flex flex-1 gap-4 rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900/50 p-4 flex-col shadow-sm">
+            <span class="material-symbols-outlined text-primary">auto_awesome</span>
             <div class="flex flex-col gap-1">
-              <h2 class="text-text-light dark:text-text-dark text-base font-bold leading-tight">Grooming &amp; Self-Care
+              <h2 class="text-slate-800 dark:text-slate-100 text-base font-bold leading-tight">Grooming &amp; Self-Care
               </h2>
-              <p class="text-subtle-light dark:text-subtle-dark text-sm font-normal leading-normal">Tips for looking
-                your best</p>
+              <p class="text-slate-500 dark:text-slate-400 text-sm font-normal leading-normal">Tips for looking sharp
+              </p>
             </div>
           </div>
       </a>
-      <a href="s3.html">
-
-        <div
-          class="flex flex-1 gap-3 rounded-xl border border-border-light dark:border-border-dark bg-card-light dark:bg-card-dark p-4 flex-col shadow-sm">
-          <span class="material-symbols-outlined text-primary">trending_up</span>
-          <div class="flex flex-col gap-1">
-            <h2 class="text-text-light dark:text-text-dark text-base font-bold leading-tight">Behavior &amp; Confidence
-            </h2>
-            <p class="text-subtle-light dark:text-subtle-dark text-sm font-normal leading-normal">Build your inner
-              strength
-            </p>
-          </div>
-        </div>
-      </a>
       <a href="s4.html">
         <div
-          class="flex flex-1 gap-3 rounded-xl border border-border-light dark:border-border-dark bg-card-light dark:bg-card-dark p-4 flex-col shadow-sm">
-          <span class="material-symbols-outlined text-primary">school</span>
+          class="flex flex-1 gap-4 rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900/50 p-4 flex-col shadow-sm">
+          <span class="material-symbols-outlined text-primary">trending_up</span>
           <div class="flex flex-col gap-1">
-            <h2 class="text-text-light dark:text-text-dark text-base font-bold leading-tight">Knowledge Hub</h2>
-            <p class="text-subtle-light dark:text-subtle-dark text-sm font-normal leading-normal">Learn about important
-              topics
+            <h2 class="text-slate-800 dark:text-slate-100 text-base font-bold leading-tight">Behavior &amp; Confidence
+            </h2>
+            <p class="text-slate-500 dark:text-slate-400 text-sm font-normal leading-normal">Build your inner strength
             </p>
           </div>
         </div>
       </a>
-      <a href="s5.html">
+      <a href="s3.html">
         <div
-          class="flex flex-1 gap-3 rounded-xl border border-border-light dark:border-border-dark bg-card-light dark:bg-card-dark p-4 flex-col shadow-sm">
-          <span class="material-symbols-outlined text-primary">smart_toy</span>
+          class="flex flex-1 gap-4 rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900/50 p-4 flex-col shadow-sm">
+          <span class="material-symbols-outlined text-primary">school</span>
           <div class="flex flex-col gap-1">
-            <h2 class="text-text-light dark:text-text-dark text-base font-bold leading-tight">Ask AI Anything</h2>
-            <p class="text-subtle-light dark:text-subtle-dark text-sm font-normal leading-normal">Get instant, private
-              advice
-            </p>
+            <h2 class="text-slate-800 dark:text-slate-100 text-base font-bold leading-tight">Knowledge Hub</h2>
+            <p class="text-slate-500 dark:text-slate-400 text-sm font-normal leading-normal">Learn something new</p>
           </div>
         </div>
       </a>
       <a href="s6.html">
         <div
-          class="flex flex-1 gap-3 rounded-xl border border-border-light dark:border-border-dark bg-card-light dark:bg-card-dark p-4 flex-col col-span-2 shadow-sm">
+          class="flex flex-1 gap-4 rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900/50 p-4 flex-col shadow-sm">
           <span class="material-symbols-outlined text-primary">groups</span>
           <div class="flex flex-col gap-1">
-            <h2 class="text-text-light dark:text-text-dark text-base font-bold leading-tight">Mentorship</h2>
-            <p class="text-subtle-light dark:text-subtle-dark text-sm font-normal leading-normal">Connect with a mentor
-              for
-              guidance</p>
+            <h2 class="text-slate-800 dark:text-slate-100 text-base font-bold leading-tight">Mentorship</h2>
+            <p class="text-slate-500 dark:text-slate-400 text-sm font-normal leading-normal">Connect with a mentor</p>
           </div>
         </div>
       </a>
   </div>
+  <!-- AI Chat Card -->
+  <a href="s5.html">
+    <div class="px-4">
+      <div
+        class="flex flex-col gap-3 rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900/50 p-4 shadow-sm">
+        <div class="flex items-center gap-3">
+          <span class="material-symbols-outlined text-primary">smart_toy</span>
+          <div class="flex flex-col">
+            <h2 class="text-slate-800 dark:text-slate-100 text-base font-bold leading-tight">Ask AI Anything</h2>
+            <p class="text-slate-500 dark:text-slate-400 text-sm font-normal leading-normal">Get instant answers</p>
+          </div>
+        </div>
+        <div class="relative flex items-center">
+          <input
+            class="w-full rounded-full border-slate-300 dark:border-slate-700 bg-slate-100 dark:bg-slate-800 text-slate-800 dark:text-slate-200 placeholder-slate-400 dark:placeholder-slate-500 focus:ring-primary focus:border-primary pr-12"
+            placeholder="Type your question..." type="text" />
+          <button class="absolute right-1 flex h-8 w-8 items-center justify-center rounded-full bg-primary text-white">
+            <span class="material-symbols-outlined text-lg">arrow_upward</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </a>
   </main>
   <!-- Bottom Nav Bar -->
-  <nav
-    class="fixed bottom-0 left-0 right-0 flex border-t border-border-light dark:border-border-dark bg-card-light/80 dark:bg-card-dark/80 px-4 pb-3 pt-2 backdrop-blur-sm">
-    <a class="flex flex-1 flex-col items-center justify-end gap-1 text-primary" href="#">
-      <div class="flex h-8 items-center justify-center">
-        <span class="material-symbols-outlined fill">home</span>
-      </div>
-      <p class="text-primary text-xs font-medium leading-normal tracking-[0.015em]">Home</p>
-    </a>
-    <a class="flex flex-1 flex-col items-center justify-end gap-1 text-subtle-light dark:text-subtle-dark" href="#">
-      <div class="flex h-8 items-center justify-center">
-        <span class="material-symbols-outlined">bar_chart</span>
-      </div>
-      <p class="text-xs font-medium leading-normal tracking-[0.015em]">Progress</p>
-    </a>
-    <a class="flex flex-1 flex-col items-center justify-end gap-1 text-subtle-light dark:text-subtle-dark" href="#">
-      <div class="flex h-8 items-center justify-center">
-        <span class="material-symbols-outlined">forum</span>
-      </div>
-      <p class="text-xs font-medium leading-normal tracking-[0.015em]">Community</p>
-    </a>
-    <a class="flex flex-1 flex-col items-center justify-end gap-1 text-subtle-light dark:text-subtle-dark" href="#">
-      <div class="flex h-8 items-center justify-center">
-        <span class="material-symbols-outlined">settings</span>
-      </div>
-      <p class="text-xs font-medium leading-normal tracking-[0.015em]">Settings</p>
-    </a>
-  </nav>
+  <footer class="fixed bottom-0 left-0 right-0 z-10 p-4 bg-transparent">
+    <div
+      class="flex gap-2 border border-slate-200/80 dark:border-slate-800/80 bg-white/80 dark:bg-slate-900/80 backdrop-blur-lg px-4 pb-3 pt-2 rounded-full shadow-lg">
+      <a class="flex flex-1 flex-col items-center justify-end gap-1.5" href="#">
+        <div class="flex h-8 items-center justify-center bg-primary/20 text-primary rounded-full px-5">
+          <span class="material-symbols-outlined">home</span>
+        </div>
+        <p class="text-primary text-xs font-medium leading-normal tracking-[0.015em]">Home</p>
+      </a>
+      <a class="flex flex-1 flex-col items-center justify-end gap-1.5 text-slate-500 dark:text-slate-400" href="progress.html">
+        <div class="flex h-8 items-center justify-center">
+          <span class="material-symbols-outlined">bar_chart</span>
+        </div>
+        <p class="text-xs font-medium leading-normal tracking-[0.015em]">Progress</p>
+      </a>
+      <a class="flex flex-1 flex-col items-center justify-end gap-1.5 text-slate-500 dark:text-slate-400" href="community.html">
+        <div class="flex h-8 items-center justify-center">
+          <span class="material-symbols-outlined">forum</span>
+        </div>
+        <p class="text-xs font-medium leading-normal tracking-[0.015em]">Community</p>
+      </a>
+      <a class="flex flex-1 flex-col items-center justify-end gap-1.5 text-slate-500 dark:text-slate-400" href="settings.html">
+        <div class="flex h-8 items-center justify-center">
+          <span class="material-symbols-outlined">settings</span>
+        </div>
+        <p class="text-xs font-medium leading-normal tracking-[0.015em]">Settings</p>
+      </a>
+    </div>
+  </footer>
   </div>
 </body>
 

@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Progress Screen</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "primary": "#0077B6",
+              "background-light": "#F9F9F9",
+              "background-dark": "#101d22",
+              "text-charcoal": "#333333",
+              "text-charcoal-dark": "#E0E0E0",
+              "border-light": "#E0E0E0",
+              "border-dark": "#2d3748"
+            },
+            fontFamily: {
+              "display": ["Plus Jakarta Sans", "sans-serif"]
+            },
+            borderRadius: {"DEFAULT": "0.5rem", "lg": "1rem", "xl": "1.5rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="font-display">
+<div class="relative flex min-h-screen w-full flex-col bg-background-light dark:bg-background-dark group/design-root overflow-x-hidden">
+<!-- Main Content Area -->
+<main class="flex-grow pb-28">
+<!-- Top App Bar -->
+<div class="flex items-center bg-background-light dark:bg-background-dark p-4 pb-2 justify-between sticky top-0 z-10">
+<div class="flex size-12 shrink-0 items-center justify-start">
+<!-- Placeholder for potential left icon -->
+</div>
+<h1 class="text-text-charcoal dark:text-text-charcoal-dark text-lg font-bold leading-tight tracking-[-0.015em] flex-1 text-center">My Progress</h1>
+<div class="flex w-12 items-center justify-end">
+<button class="flex max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-xl h-12 bg-transparent text-text-charcoal dark:text-text-charcoal-dark gap-2 text-base font-bold leading-normal tracking-[0.015em] min-w-0 p-0">
+<span class="material-symbols-outlined text-2xl">notifications</span>
+</button>
+</div>
+</div>
+<!-- User Greeting Card -->
+<div class="p-4 @container">
+<div class="flex flex-col items-center justify-start rounded-xl bg-white dark:bg-background-dark/50 shadow-[0_4px_12px_rgba(0,0,0,0.05)] p-6 gap-4">
+<div class="relative flex items-center justify-center">
+<svg class="h-32 w-32 transform -rotate-90" viewbox="0 0 120 120">
+<circle cx="60" cy="60" fill="none" r="54" stroke="#E0E0E0" stroke-width="12"></circle>
+<circle cx="60" cy="60" fill="none" r="54" stroke="url(#progressGradient)" stroke-dasharray="339.29" stroke-dashoffset="84.82" stroke-linecap="round" stroke-width="12"></circle>
+<defs>
+<lineargradient id="progressGradient" x1="0%" x2="0%" y1="0%" y2="100%">
+<stop offset="0%" style="stop-color:#0077B6;stop-opacity:1"></stop>
+<stop offset="100%" style="stop-color:#00A6ED;stop-opacity:1"></stop>
+</lineargradient>
+</defs>
+</svg>
+<div class="absolute flex flex-col items-center justify-center">
+<p class="text-primary tracking-light text-3xl font-bold leading-tight">75%</p>
+<p class="text-gray-500 dark:text-gray-400 text-sm font-normal leading-normal">Overall</p>
+</div>
+</div>
+<div class="flex w-full grow flex-col items-center justify-center gap-1 text-center">
+<p class="text-text-charcoal dark:text-text-charcoal-dark text-lg font-bold leading-tight tracking-[-0.015em]">Keep it up, Alex!</p>
+<p class="text-gray-500 dark:text-gray-400 text-base font-normal leading-normal">You're making great strides on your journey.</p>
+</div>
+</div>
+</div>
+<!-- Progress Stat Cards -->
+<div class="flex flex-col gap-4 px-4">
+<!-- Lessons Completed Card -->
+<div class="flex flex-col gap-3 p-6 rounded-xl bg-white dark:bg-background-dark/50 shadow-[0_4px_12px_rgba(0,0,0,0.05)]">
+<div class="flex gap-6 justify-between items-center">
+<p class="text-text-charcoal dark:text-text-charcoal-dark text-base font-medium leading-normal">Lessons Completed</p>
+<p class="text-gray-500 dark:text-gray-400 text-sm font-normal leading-normal">12/30</p>
+</div>
+<div class="rounded-full bg-[#E0E0E0] dark:bg-gray-700 h-2.5">
+<div class="h-2.5 rounded-full bg-primary" style="width: 40%;"></div>
+</div>
+</div>
+<!-- Stats Grid -->
+<div class="grid grid-cols-2 gap-4">
+<div class="flex flex-col gap-2 rounded-xl p-6 bg-white dark:bg-background-dark/50 shadow-[0_4px_12px_rgba(0,0,0,0.05)] items-start">
+<div class="p-2 rounded-full bg-primary/20 mb-2">
+<span class="material-symbols-outlined text-primary text-xl">edit_note</span>
+</div>
+<p class="text-text-charcoal dark:text-text-charcoal-dark text-base font-medium leading-normal">Reflections Written</p>
+<p class="text-primary tracking-light text-3xl font-bold leading-tight">8</p>
+</div>
+<div class="flex flex-col gap-2 rounded-xl p-6 bg-white dark:bg-background-dark/50 shadow-[0_4px_12px_rgba(0,0,0,0.05)] items-start">
+<div class="p-2 rounded-full bg-primary/20 mb-2">
+<span class="material-symbols-outlined text-primary text-xl">forum</span>
+</div>
+<p class="text-text-charcoal dark:text-text-charcoal-dark text-base font-medium leading-normal">Mentorship Chats</p>
+<p class="text-primary tracking-light text-3xl font-bold leading-tight">3</p>
+</div>
+</div>
+<!-- Positive Interactions Card -->
+<div class="flex flex-col gap-3 p-6 rounded-xl bg-white dark:bg-background-dark/50 shadow-[0_4px_12px_rgba(0,0,0,0.05)]">
+<div class="flex gap-6 justify-between items-center">
+<div class="flex items-center gap-3">
+<div class="p-2 rounded-full bg-primary/20">
+<span class="material-symbols-outlined text-primary text-xl">favorite</span>
+</div>
+<p class="text-text-charcoal dark:text-text-charcoal-dark text-base font-medium leading-normal">Positive Interactions</p>
+</div>
+<p class="text-primary tracking-light text-2xl font-bold leading-tight">21</p>
+</div>
+</div>
+</div>
+</main>
+<!-- Bottom Navigation Bar -->
+<div class="fixed bottom-0 left-0 right-0 p-4 bg-transparent z-20">
+<div class="flex justify-around items-center h-16 bg-white dark:bg-gray-800 rounded-full shadow-[0_5px_20px_rgba(0,0,0,0.1)] gap-2 border border-black/5 dark:border-white/5 mx-auto max-w-sm">
+<a class="flex flex-col items-center justify-center gap-1 text-gray-500 dark:text-gray-400 w-1/4" href="index.html">
+<span class="material-symbols-outlined text-2xl">home</span>
+<p class="text-xs font-medium tracking-[0.015em]">Home</p>
+</a>
+<a class="flex flex-col items-center justify-center gap-1 text-primary dark:text-primary w-1/4" href="#">
+<span class="material-symbols-outlined text-2xl" style="font-variation-settings: 'FILL' 1, 'wght' 700;">bar_chart_4_bars</span>
+<p class="text-xs font-bold tracking-[0.015em]">Progress</p>
+</a>
+<a class="flex flex-col items-center justify-center gap-1 text-gray-500 dark:text-gray-400 w-1/4" href="community.html">
+<span class="material-symbols-outlined text-2xl">groups</span>
+<p class="text-xs font-medium tracking-[0.015em]">Community</p>
+</a>
+<a class="flex flex-col items-center justify-center gap-1 text-gray-500 dark:text-gray-400 w-1/4" href="settings.html">
+<span class="material-symbols-outlined text-2xl">settings</span>
+<p class="text-xs font-medium tracking-[0.015em]">Settings</p>
+</a>
+</div>
+</div>
+</div>
+</body></html>

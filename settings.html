@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Settings</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "primary": "#11a4d4",
+              "background-light": "#f6f8f8",
+              "background-dark": "#101d22",
+            },
+            fontFamily: {
+              "display": ["Plus Jakarta Sans", "sans-serif"]
+            },
+            borderRadius: {"DEFAULT": "0.5rem", "lg": "1rem", "xl": "1.5rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+      .material-symbols-outlined {
+        font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+      }
+      .material-symbols-outlined.filled {
+        font-variation-settings: 'FILL' 1;
+      }
+      .nav-active .material-symbols-outlined, .nav-active span {
+        color: #11a4d4; /* primary color */
+      }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-display text-gray-800 dark:text-gray-200">
+<div class="relative mx-auto flex h-screen min-h-[800px] w-full max-w-sm flex-col group/design-root overflow-hidden pb-32">
+<!-- Top App Bar -->
+<div class="flex items-center bg-background-light dark:bg-background-dark p-4 pb-3 justify-between sticky top-0 z-10">
+<div class="flex size-10 shrink-0 items-center"></div>
+<h2 class="text-gray-900 dark:text-white text-lg font-bold leading-tight tracking-[-0.015em] flex-1 text-center">Settings</h2>
+<div class="flex size-10 shrink-0 items-center"></div>
+</div>
+<!-- Settings List -->
+<div class="flex flex-col gap-2 px-4 pt-4">
+<!-- Profile Section -->
+<div class="flex items-center gap-4 bg-white dark:bg-background-dark/50 p-4 rounded-xl shadow-sm shadow-gray-200/50 dark:shadow-none">
+<img alt="User avatar" class="size-16 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBXhAwDm4pTqTR2si9UgTuhNZ6p-HrShf1LCznSXLs6jCkBfeklfctZuNwcWza2ckLni1-xf2EtBGgVn4nBmAICBUbIIxKiOCw-HmnqXePcszIy96MN9iyqFKP-cUX4cnCL4roEHGAOgboMUGYLN27EfQpagr4ZsBNh3ng3zAmn-D9rKqQSPvSDuWQ3QzS2xHZxXmfwMarCTfnWW656hNmS8qTnS9Kpm5cMiC055bsu3dedfpda_j5QDMDwYYY8xEhl04xCldHu0AM"/>
+<div class="flex-1">
+<p class="text-lg font-bold text-gray-900 dark:text-white">Alex Morgan</p>
+<p class="text-sm text-gray-500 dark:text-gray-400">alex.morgan@example.com</p>
+</div>
+<div class="shrink-0">
+<span class="material-symbols-outlined text-gray-400 dark:text-gray-500">chevron_right</span>
+</div>
+</div>
+<!-- List Items -->
+<div class="mt-6 flex flex-col gap-2">
+<div class="flex flex-col bg-white dark:bg-background-dark/50 rounded-xl overflow-hidden shadow-sm shadow-gray-200/50 dark:shadow-none">
+<div class="flex items-center gap-4 px-4 min-h-14 justify-between border-b border-gray-100 dark:border-gray-800">
+<div class="flex items-center gap-4">
+<div class="text-gray-700 dark:text-gray-300 flex items-center justify-center rounded-lg bg-gray-100 dark:bg-gray-800 shrink-0 size-10">
+<span class="material-symbols-outlined">palette</span>
+</div>
+<p class="text-gray-800 dark:text-gray-200 text-base font-medium leading-normal flex-1 truncate">Theme</p>
+</div>
+<div class="flex items-center gap-2 shrink-0">
+<p class="text-sm text-gray-500 dark:text-gray-400">Light</p>
+<span class="material-symbols-outlined text-gray-400 dark:text-gray-500">chevron_right</span>
+</div>
+</div>
+<div class="flex items-center gap-4 px-4 min-h-14 justify-between">
+<div class="flex items-center gap-4">
+<div class="text-gray-700 dark:text-gray-300 flex items-center justify-center rounded-lg bg-gray-100 dark:bg-gray-800 shrink-0 size-10">
+<span class="material-symbols-outlined">notifications</span>
+</div>
+<p class="text-gray-800 dark:text-gray-200 text-base font-medium leading-normal flex-1 truncate">Notifications</p>
+</div>
+<div class="shrink-0">
+<span class="material-symbols-outlined text-gray-400 dark:text-gray-500">chevron_right</span>
+</div>
+</div>
+</div>
+<div class="mt-4 flex flex-col bg-white dark:bg-background-dark/50 rounded-xl overflow-hidden shadow-sm shadow-gray-200/50 dark:shadow-none">
+<div class="flex items-center gap-4 px-4 min-h-14 justify-between border-b border-gray-100 dark:border-gray-800">
+<div class="flex items-center gap-4">
+<div class="text-gray-700 dark:text-gray-300 flex items-center justify-center rounded-lg bg-gray-100 dark:bg-gray-800 shrink-0 size-10">
+<span class="material-symbols-outlined">security</span>
+</div>
+<p class="text-gray-800 dark:text-gray-200 text-base font-medium leading-normal flex-1 truncate">Privacy &amp; Security</p>
+</div>
+<div class="shrink-0">
+<span class="material-symbols-outlined text-gray-400 dark:text-gray-500">chevron_right</span>
+</div>
+</div>
+<div class="flex items-center gap-4 px-4 min-h-14 justify-between border-b border-gray-100 dark:border-gray-800">
+<div class="flex items-center gap-4">
+<div class="text-gray-700 dark:text-gray-300 flex items-center justify-center rounded-lg bg-gray-100 dark:bg-gray-800 shrink-0 size-10">
+<span class="material-symbols-outlined">help</span>
+</div>
+<p class="text-gray-800 dark:text-gray-200 text-base font-medium leading-normal flex-1 truncate">Help &amp; Support</p>
+</div>
+<div class="shrink-0">
+<span class="material-symbols-outlined text-gray-400 dark:text-gray-500">chevron_right</span>
+</div>
+</div>
+<div class="flex items-center gap-4 px-4 min-h-14 justify-between">
+<div class="flex items-center gap-4">
+<div class="text-gray-700 dark:text-gray-300 flex items-center justify-center rounded-lg bg-gray-100 dark:bg-gray-800 shrink-0 size-10">
+<span class="material-symbols-outlined">info</span>
+</div>
+<p class="text-gray-800 dark:text-gray-200 text-base font-medium leading-normal flex-1 truncate">About</p>
+</div>
+<div class="shrink-0">
+<span class="material-symbols-outlined text-gray-400 dark:text-gray-500">chevron_right</span>
+</div>
+</div>
+</div>
+<div class="mt-4 flex flex-col bg-white dark:bg-background-dark/50 rounded-xl overflow-hidden shadow-sm shadow-gray-200/50 dark:shadow-none">
+<div class="flex items-center gap-4 px-4 min-h-14 justify-between">
+<div class="flex items-center gap-4">
+<div class="text-red-500 flex items-center justify-center rounded-lg bg-red-500/10 dark:bg-red-500/20 shrink-0 size-10">
+<span class="material-symbols-outlined">logout</span>
+</div>
+<p class="text-red-500 dark:text-red-400 text-base font-medium leading-normal flex-1 truncate">Log Out</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Bottom Navigation Bar -->
+<div class="fixed bottom-0 left-1/2 -translate-x-1/2 w-full max-w-sm">
+<div class="relative">
+<div class="absolute bottom-0 w-full h-24 bg-white dark:bg-[#1C2C33] [clip-path:path('M0,12C0,5.373,5.373,0,12,0H376c6.627,0,12,5.373,12,12V96H0V12Z')]"></div>
+<div class="relative z-10 grid grid-cols-4 items-center gap-2 p-3">
+<a class="flex flex-col items-center justify-center gap-1 p-2 rounded-lg text-gray-500 dark:text-gray-400" href="index.html">
+<span class="material-symbols-outlined">home</span>
+<span class="text-xs font-medium">Home</span>
+</a>
+<a class="flex flex-col items-center justify-center gap-1 p-2 rounded-lg text-gray-500 dark:text-gray-400" href="progress.html">
+<span class="material-symbols-outlined">trending_up</span>
+<span class="text-xs font-medium">Progress</span>
+</a>
+<a class="flex flex-col items-center justify-center gap-1 p-2 rounded-lg text-gray-500 dark:text-gray-400" href="community.html">
+<span class="material-symbols-outlined">groups</span>
+<span class="text-xs font-medium">Community</span>
+</a>
+<a class="nav-active flex flex-col items-center justify-center gap-1 p-2 rounded-lg text-primary" href="#">
+<span class="material-symbols-outlined filled">settings</span>
+<span class="text-xs font-bold">Settings</span>
+</a>
+</div>
+</div>
+</div>
+</div>
+</body></html>
